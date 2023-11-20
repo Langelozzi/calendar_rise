@@ -1,0 +1,37 @@
+{
+  "project_info": {
+    "project_number": "461325044164",
+    "project_id": "calendar-alarm-app-405620",
+    "storage_bucket": "calendar-alarm-app-405620.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:461325044164:android:5ee1cec337a922440fbc91",
+        "android_client_info": {
+          "package_name": "com.example.calendar_rise"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCEc9pHOZXV3LS2pHtzdPbGR2RxChgx48U"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "461325044164-8ijnl4qiknma5e8lesg045us8e8899ur.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.calendarRise"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
