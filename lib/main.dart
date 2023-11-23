@@ -1,7 +1,7 @@
-import 'package:alarm/alarm.dart';
 import 'package:calendar_rise/pages/auth_page.dart';
 import 'package:flutter/material.dart';
 import 'package:firebase_core/firebase_core.dart';
+import 'package:get/get_navigation/src/root/get_material_app.dart';
 import 'firebase_options.dart';
 
 void main() async {
@@ -12,9 +12,6 @@ void main() async {
     options: DefaultFirebaseOptions.currentPlatform,
   );
 
-  // Initialize Alarm package
-  await Alarm.init();
-
   runApp(const MyApp());
 }
 
@@ -24,7 +21,7 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return GetMaterialApp(
       title: 'CalendarRise',
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
