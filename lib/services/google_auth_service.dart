@@ -4,6 +4,8 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:google_sign_in/google_sign_in.dart';
 
 class GoogleAuthService implements AuthService {
+  FirebaseAuth auth = FirebaseAuth.instance;
+
   @override
   Future<AuthorizedUser> signIn() async {
     const String calendarScope = 'https://www.googleapis.com/auth/calendar';
@@ -13,7 +15,6 @@ class GoogleAuthService implements AuthService {
 
     final GoogleSignInAuthentication googleAuth =
         await googleUser!.authentication;
-
     final credential = GoogleAuthProvider.credential(
         accessToken: googleAuth.accessToken, idToken: googleAuth.idToken);
 
@@ -26,5 +27,10 @@ class GoogleAuthService implements AuthService {
         googleUser.photoUrl,
         googleAuth.accessToken!,
         googleAuth.idToken);
+  }
+
+  @override
+  signOut() async {
+    await auth.signOut();
   }
 }
